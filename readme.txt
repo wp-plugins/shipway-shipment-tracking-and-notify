@@ -69,10 +69,10 @@ After that from admin order detail page you can select the courier and put awb n
 
 == Screenshots ==
 
-/assets/shipway.jpg
-/assets/shipway1.jpg
-/assets/shipway2.jpg
-/assets/shipway3.jpg
+1. /assets/shipway.jpg
+2. /assets/shipway1.jpg
+3. /assets/shipway2.jpg
+4. /assets/shipway3.jpg
 
 == Upgrade Notice ==
 
