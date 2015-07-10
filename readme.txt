@@ -1,4 +1,4 @@
-=== WooCommerce Shipway Courier Tracking & notify ===
+=== Shipway Courier Tracking & notify ===
 Contributors: onjection
 Donate link: http://shipway.in/
 Tags: shipway, woocommerce
@@ -69,7 +69,10 @@ After that from admin order detail page you can select the courier and put awb n
 
 == Screenshots ==
 
-http://www.shipway.in/images/shipway_logo.png
+/assets/shipway.jpg
+/assets/shipway1.jpg
+/assets/shipway2.jpg
+/assets/shipway3.jpg
 
 == Upgrade Notice ==
 
