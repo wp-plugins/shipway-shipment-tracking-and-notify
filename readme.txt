@@ -7,26 +7,28 @@ Tested up to: 4.2.2
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 == Description ==
 Shipway provides Shipment Tracking and Customer Notification Services
 
-=Shipway Key Features=
-* Notify your customers about their shipments via SMS and eMail.
-* Customer notification on important delivery updates such as Shipment Picked, In Transit, Out of Delivery, Delivery Issue, Delivered
-* Customers can track the shipment status of their order on your website.
-* Dedicated tracking link for each shipment.
-* Track airwaybill number from multiple courier companies at one place.
-* Track complete shipping status from confirm order to order delivery
-* Show shipment realtime status details.
-* 100% new files, this extension will NOT replace any core files
-*Support Major Indian Carriers :-
+= Features =
+1. Notify your customers about their shipments via SMS and eMail
+2. Customer notification on important delivery updates such as Shipment Picked, In Transit, Out of Delivery, Delivery Issue, Delivered
+3. Customers can track the shipment status of their order on your website
+4. Dedicated tracking link for each shipment
+5. Track airwaybill number from multiple courier companies at one place
+6. Track complete shipping status from confirm order to order delivery
+7. Show shipment realtime status details
+8. 100% new files, this extension will NOT replace any core files
+9. Support Major Indian Carriers:
 Bluedart, DTDC, Fedex India, Aramex, Delhivery, Gojavas, Ecom Express, DHL India, DotZot, First Flight, Gati, Red Express, The Professional Couriers, and Xpress Bess
 
-=Benefits==
-1. Reduces Customer Queries and Improves User Experience.
-2. Improves the post-buying experience for both customer and the merchant.
+= Benefits =
+1. Reduces Customer Queries and Improves User Experience
+2. Improves the post-buying experience for both customer and the merchant
 3. Know which shipments are facing delivery problems
-4. Shipment Insights for Merchants about the shipment statuses.
+4. Shipment Insights for Merchants about the shipment statuses
+
 ** 7 days trial is free for sms and email notifications to customer. **
 In case facing any issue while installation/any query contact us at contact@shipway.in or login to http://shipway.in
 
