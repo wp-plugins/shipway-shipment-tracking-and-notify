@@ -88,9 +88,9 @@ After that from admin order detail page you can select the courier and put awb n
 
 == Screenshots ==
 
-1. /assets/shipway1.png
-2. /assets/shipway2.png
-3. /assets/shipway3.png
+1. Shipway Tracking.
+2. Track all couriers at one place.
+3. Easy notofications.
 
 == Upgrade Notice ==
 
