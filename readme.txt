@@ -1,15 +1,34 @@
 === Shipway Courier Tracking & notify ===
 Contributors: onjection
 Donate link: http://shipway.in/
-Tags: shipway, woocommerce
-Requires at least: 4.0
+Tags: shipway, woocommerce, plugin, shipping, tracking, notify
+Requires at least: 3.5
 Tested up to: 4.2.2
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
+Shipway provides Shipment Tracking and Customer Notification Services
 
-Shipway courier tracking connects your WooCommerce shop with your tracking shipment status. 
+=Shipway Key Features=
+* Notify your customers about their shipments via SMS and eMail.
+* Customer notification on important delivery updates such as Shipment Picked, In Transit, Out of Delivery, Delivery Issue, Delivered
+* Customers can track the shipment status of their order on your website.
+* Dedicated tracking link for each shipment.
+* Track airwaybill number from multiple courier companies at one place.
+* Track complete shipping status from confirm order to order delivery
+* Show shipment realtime status details.
+* 100% new files, this extension will NOT replace any core files
+*Support Major Indian Carriers :-
+Bluedart, DTDC, Fedex India, Aramex, Delhivery, Gojavas, Ecom Express, DHL India, DotZot, First Flight, Gati, Red Express, The Professional Couriers, and Xpress Bess
+
+=Benefits==
+1. Reduces Customer Queries and Improves User Experience.
+2. Improves the post-buying experience for both customer and the merchant.
+3. Know which shipments are facing delivery problems
+4. Shipment Insights for Merchants about the shipment statuses.
+** 7 days trial is free for sms and email notifications to customer. **
+In case facing any issue while installation/any query contact us at contact@shipway.in or login to http://shipway.in
 
 == Installation ==
 
@@ -20,10 +39,10 @@ Shipway courier tracking connects your WooCommerce shop with your tracking shipm
 
 == After Installation ==
 
-1. Click on menu link Shipway (/wp-admin/admin.php?page=my-setting-admin).
+1. Click on menu link Shipway or use (/wp-admin/admin.php?page=my-setting-admin).
 2. If you don't have shipway account,register on http://shipway.in/admin/index.php/auth/register, link (Register Here) is given in admin panel.
-3.  After registration,Shipway loginid and licence key will be sent to your registered email. 
-4.  Enter Shipway loginid and licence key in the form and click on save changes button.
+3. After registration,Shipway loginid and licence key will be sent to your registered email. 
+4. Enter Shipway loginid and licence key in the form and click on save changes button.
 5. Click on  WooCommerce orders link.
 6. Click on any order this will open Edit Order page , Now you will see Order Tracking panel on right side of page.
 7. Enter Airway Bill number/AWB Number, Select a courier from drop down and press Save order button.
@@ -69,10 +88,9 @@ After that from admin order detail page you can select the courier and put awb n
 
 == Screenshots ==
 
-1. /assets/shipway.jpg
-2. /assets/shipway1.jpg
-3. /assets/shipway2.jpg
-4. /assets/shipway3.jpg
+1. /assets/shipway1.png
+2. /assets/shipway2.png
+3. /assets/shipway3.png
 
 == Upgrade Notice ==
 
