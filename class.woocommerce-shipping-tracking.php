@@ -133,10 +133,7 @@ if ( ! class_exists( 'WooCommerce_Shipping_Tracking' ) ) {
 
 
 		function save_order_tracking_metabox( $post_id ) {
-		
-	
-		
-			$post_id=$post_id ;
+		$post_id=$post_id ;
 			$key='ship_tracking_code';
 			$single = TRUE;
 		if ( get_post_meta($post_id, $key, $single) ) {
@@ -144,22 +141,68 @@ if ( ! class_exists( 'WooCommerce_Shipping_Tracking' ) ) {
 			$a =  get_option('my_option_name'); 
 	
 
-	} else {
+	      } else {
+		  
            $a =  get_option('my_option_name'); 
  
            if(isset($_POST['ship_tracking_code'])   &&   $_POST['ship_tracking_code'] != '' ){
-					$data = array();
-					$data['first_name']    	= $_POST['_billing_first_name'];
-					$data['last_name'] 	   	= $_POST['_billing_last_name'];
-					$data['email']         	= $_POST['_billing_email'];
-					$data['phone']         	= $_POST['_billing_phone'];
-					$data['products']      	= 'aaaaa';
-					$data['company']	   	= 'Onjection';
-					$data['carrier_id']    	= $_POST['ship_courier_name'];
-					$data['order_id'] 	   	= $_POST['ID'];
-					$data['awb']         	= $_POST['ship_tracking_code'];
-					$data['username']         	= $a['id_number'];
-					$data['password']      	= $a['title'];
+		   $data = array();
+				$company =  get_option( 'blogname' ); 
+				$data['first_name']    	= $_POST['_billing_first_name'];
+				$data['last_name'] 	   	= $_POST['_billing_last_name'];
+				$data['email']         	= $_POST['_billing_email'];
+				$data['phone']         	= $_POST['_billing_phone'];
+
+				$data['company']	   	= $company;
+
+				$data['carrier_id']    	= $_POST['ship_courier_name'];
+				$data['order_id'] 	   	= $_POST['ID'];
+				$data['awb']         	= $_POST['ship_tracking_code'];
+				$data['username']         	= $a['id_number'];
+				$data['password']      	= $a['title'];
+
+				$order = new WC_Order($_POST['ID']);
+				$items = $order->get_items();
+
+				$data['products'] 	= '';
+
+				$products = array();
+			
+			foreach($items as $key => $product){
+			    $products[$key]['product_id'] 	= $product['product_id'];
+				$products[$key]['name'] 		= $product['name'];
+				$products[$key]['price'] 		= $product['line_total'];
+				$products[$key]['quantity'] 	= $product['qty'];
+				$products[$key]['url'] 			= post_permalink($product['product_id']);
+				$data['products'] .= $product['name'] . " ";		
+				}
+				
+			$order_details['order_id']    	= $_POST['ID'];
+			$order_details['order_date']    	= $_POST['order_date'];
+			$order_details['firstname']    	= $_POST['_billing_first_name'];
+			$order_details['lastname'] 	   	= $_POST['_billing_last_name'];
+			$order_details['email']         	= $_POST['_billing_email'];
+			$order_details['phone']         	= $_POST['_billing_phone'];
+            $order_details['address']    	= $_POST['_billing_address_1'];
+			$order_details['city']    	= $_POST['_billing_city'];
+			$order_details['state']    	= $_POST['_billing_state'];
+			$order_details['zipcode']    	= $_POST['_billing_postcode'];
+			$order_details['country']    	= $_POST['_billing_country'];
+					
+			$order_details['products'] = $products;
+			$payment_type = 'P';
+			if( strtolower( trim( $_POST['_payment_method'] ) ) == 'cash on delivery'){
+				$payment_type = 'C';
+			}
+			$order_details['payment_type'] = $payment_type;
+			$order_details['collectable_amount'] = ($payment_type == 'C') ? $_POST['_order_total'] : 0;
+			$order_details['payment_method']         	= $_POST['_payment_method'];
+			$order_details['amount']    	= $_POST['_order_total'];
+			$order_details['return_address'] 	= '';
+			
+		
+			
+			$data['order']	= $order_details;
 
 			$url = "http://shipway.in/api/pushOrderData";
 			
@@ -185,7 +228,7 @@ if ( ! class_exists( 'WooCommerce_Shipping_Tracking' ) ) {
 	 
 	}
 
- 	update_post_meta( $post_id, 'ship_tracking_code', stripslashes( $_POST['ship_tracking_code'] ) );
+ 	        update_post_meta( $post_id, 'ship_tracking_code', stripslashes( $_POST['ship_tracking_code'] ) );
 			if ( isset( $_POST['ship_courier_name'] ) ) {
 				update_post_meta( $post_id, 'ship_courier_name', stripslashes( $_POST['ship_courier_name'] ) );
 			}
